@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolyo | Oyun Geliştirici & 3D Sanatçı</title>
+    <meta name="description" content="Unity, Unreal Engine ve Blender ile interaktif dünyalar yaratan bir Oyun Geliştirici ve 3D Sanatçının kişisel portfolyosu.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <a href="#home" class="logo">
+            <div class="logo-icon">M</div>
+            <span>Melda<span class="accent">.</span></span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home" class="nav-link active" data-section="home">Ana Sayfa</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">Hakkımda</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">Projeler</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">İletişim</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menüyü aç">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge animate-on-scroll">
+                <i class="fa-solid fa-rocket"></i> Portfolyoma Hoş Geldiniz
+            </div>
+            <h1 class="hero-title animate-on-scroll">
+                Oyun Geliştirici
+                <br>
+                <span class="gradient-text">&</span>
+                <span id="typewriter" class="typewriter-text"></span>
+                <span class="typewriter-cursor">|</span>
+            </h1>
+            <p class="hero-description animate-on-scroll">
+                Unity, Unreal Engine ve Blender kullanarak interaktif dünyalar yaratıyorum.
+                Yapay Zeka ve 3D teknolojilerini bir araya getiren yenilikçi projeler geliştiriyorum.
+            </p>
+            <div class="hero-actions animate-on-scroll">
+                <a href="#projects" class="btn btn-primary">
+                    <span>Projelerimi Gör</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-ghost">
+                    <span>İletişime Geç</span>
+                </a>
+            </div>
+            <div class="hero-stats animate-on-scroll">
+                <div class="stat">
+                    <span class="stat-number" data-target="10">0</span>+
+                    <span class="stat-label">Tamamlanan Proje</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="3">0</span>+
+                    <span class="stat-label">Yıl Deneyim</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="1">0</span>
+                    <span class="stat-label">TÜBİTAK Projesi</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual animate-on-scroll">
+            <div class="cube-scene">
+                <div class="cube">
+                    <div class="face front"><i class="fa-brands fa-unity"></i></div>
+                    <div class="face back"><i class="fa-solid fa-cube"></i></div>
+                    <div class="face right"><i class="fa-solid fa-gamepad"></i></div>
+                    <div class="face left"><i class="fa-solid fa-robot"></i></div>
+                    <div class="face top"><i class="fa-solid fa-code"></i></div>
+                    <div class="face bottom"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                </div>
+            </div>
+            <div class="orbit-ring ring-1"></div>
+            <div class="orbit-ring ring-2"></div>
+            <div class="orbit-ring ring-3"></div>
+        </div>
+        <a href="#about" class="scroll-indicator">
+            <span>Keşfet</span>
+            <div class="scroll-arrow">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fa-solid fa-user"></i> Hakkımda</span>
+                <h2>Yeteneklerim & <span class="gradient-text">Teknolojiler</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text animate-on-scroll">
+                    <p>
+                        Oyun geliştirme ve 3D modelleme tutkunu bir yazılımcıyım. Sadece oyun mekanikleri 
+                        tasarlamakla kalmıyor, aynı zamanda Blender üzerinde kendi dünyalarımı modelliyorum.
+                    </p>
+                    <p>
+                        Son dönemde özellikle <strong>Yapay Zeka</strong> entegrasyonlarına odaklanarak 
+                        tarihi eserlerin hikayelerini anlatan yenilikçi sistemler üzerinde çalışıyorum.
+                    </p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card animate-on-scroll" data-delay="0">
+                        <div class="skill-icon-wrapper">
+                            <i class="fa-brands fa-unity"></i>
+                        </div>
+                        <h3>Unity</h3>
+                        <p>C# ile oyun mekanikleri, fizik simülasyonu ve shader programlama</p>
+                        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-card animate-on-scroll" data-delay="100">
+                        <div class="skill-icon-wrapper">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                        <h3>Unreal Engine</h3>
+                        <p>Blueprints, C++, Lumen & Nanite rendering</p>
+                        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-card animate-on-scroll" data-delay="200">
+                        <div class="skill-icon-wrapper">
+                            <i class="fa-solid fa-cube"></i>
+                        </div>
+                        <h3>Blender</h3>
+                        <p>3D modelleme, rigging, animasyon ve PBR materyaller</p>
+                        <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                    </div>
+                    <div class="skill-card animate-on-scroll" data-delay="300">
+                        <div class="skill-icon-wrapper">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3>Yapay Zeka</h3>
+                        <p>AI entegrasyonu, doğal dil işleme ve bilgisayarlı görü</p>
+                        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fa-solid fa-folder-open"></i> Projeler</span>
+                <h2>Öne Çıkan <span class="gradient-text">Projeler</span></h2>
+            </div>
+
+            <!-- Featured TÜBİTAK Project -->
+            <div class="featured-project animate-on-scroll">
+                <div class="featured-badge">
+                    <i class="fa-solid fa-star"></i> TÜBİTAK Projesi
+                </div>
+                <div class="featured-content">
+                    <div class="featured-visual">
+                        <div class="featured-icon-display">
+                            <div class="icon-float"><i class="fa-solid fa-landmark"></i></div>
+                            <div class="icon-rings">
+                                <div class="icon-ring"></div>
+                                <div class="icon-ring"></div>
+                                <div class="icon-ring"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-info">
+                        <h3>Yapay Zeka Destekli Tarihi Eser Rehberi</h3>
+                        <p>
+                            Tarihi sanat eserlerini Blender üzerinde detaylı bir şekilde 3D modellediğim 
+                            ve bu modellere entegre ettiğim Yapay Zeka sistemi sayesinde kullanıcıların 
+                            eserlere soru sorabildiği interaktif bir Android uygulaması.
+                        </p>
+                        <div class="tech-tags">
+                            <span><i class="fa-solid fa-cube"></i> Blender</span>
+                            <span><i class="fa-brands fa-android"></i> Android</span>
+                            <span><i class="fa-solid fa-brain"></i> AI / NLP</span>
+                            <span><i class="fa-solid fa-mobile-screen"></i> Mobile</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">
+                            <span>Detayları Gör</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Projects Grid -->
+            <div class="projects-grid">
+                <div class="project-card animate-on-scroll" data-delay="0">
+                    <div class="card-visual bg-unity">
+                        <i class="fa-brands fa-unity"></i>
+                    </div>
+                    <div class="card-body">
+                        <h4>Unity Platformer</h4>
+                        <p>2D/3D platform dinamiklerini içeren aksiyon oyunu prototipi.</p>
+                        <div class="card-tags">
+                            <span>Unity</span><span>C#</span><span>2D/3D</span>
+                        </div>
+                    </div>
+                    <div class="card-hover-border"></div>
+                </div>
+                <div class="project-card animate-on-scroll" data-delay="100">
+                    <div class="card-visual bg-unreal">
+                        <i class="fa-solid fa-gun"></i>
+                    </div>
+                    <div class="card-body">
+                        <h4>Unreal FPS Demo</h4>
+                        <p>Unreal Engine 5 ile geliştirilmiş, Lumen ve Nanite kullanan FPS demosu.</p>
+                        <div class="card-tags">
+                            <span>UE5</span><span>C++</span><span>Lumen</span>
+                        </div>
+                    </div>
+                    <div class="card-hover-border"></div>
+                </div>
+                <div class="project-card animate-on-scroll" data-delay="200">
+                    <div class="card-visual bg-blender">
+                        <i class="fa-solid fa-planet-ringed fa-rocket"></i>
+                    </div>
+                    <div class="card-body">
+                        <h4>Sci-Fi Çevre Tasarımı</h4>
+                        <p>Blender ile sıfırdan modellenmiş bilim kurgu temalı çevre tasarımı.</p>
+                        <div class="card-tags">
+                            <span>Blender</span><span>PBR</span><span>Render</span>
+                        </div>
+                    </div>
+                    <div class="card-hover-border"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fa-solid fa-envelope"></i> İletişim</span>
+                <h2>Birlikte <span class="gradient-text">Çalışalım</span></h2>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Proje fikriniz mi var?</h3>
+                    <p>Oyun geliştirme, 3D modelleme veya AI projeleriniz için benimle iletişime geçebilirsiniz.</p>
+                    <div class="contact-links">
+                        <a href="#" class="contact-link-item">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <span class="contact-link-label">E-posta</span>
+                                <span class="contact-link-value">hello@example.com</span>
+                            </div>
+                        </a>
+                        <a href="#" class="contact-link-item">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <span class="contact-link-label">Konum</span>
+                                <span class="contact-link-value">Türkiye</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="social-row">
+                        <a href="#" class="social-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn" aria-label="Itch.io"><i class="fa-brands fa-itch-io"></i></a>
+                        <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form animate-on-scroll">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder=" " required>
+                        <label for="name">Adınız</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">E-posta Adresiniz</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder=" " rows="4" required></textarea>
+                        <label for="message">Mesajınız</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                        <span>Mesaj Gönder</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#home" class="footer-logo">
+                <div class="logo-icon">M</div>
+                <span>Melda<span class="accent">.</span></span>
+            </a>
+            <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
+            <div class="footer-links">
+                <a href="#home">Ana Sayfa</a>
+                <a href="#about">Hakkımda</a>
+                <a href="#projects">Projeler</a>
+                <a href="#contact">İletişim</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
